@@ -1,4 +1,4 @@
-var list = window.list =[
+var list =[
 		"ass",
 		"Alaskan%20Firedragon",
 		"anal",
