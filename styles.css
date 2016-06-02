@@ -1,6 +1,12 @@
 body {
-	/*width: 100%;
-	height: 100vh;*/
+    margin: 10px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 20px);
+    background-color: #EE0099;
 }
 
 .dictionary {
@@ -58,4 +64,146 @@ body {
 
 .info--faq:hover > .tooltip, .info--about:hover > .tooltip {
 	opacity: 1;
+}
+
+
+/******************************************** Menu *******************************************/
+/*********************************************************************************************/
+
+.menu {
+    width: 60px;
+    height: 60px;
+    background: white;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 200ms;
+}
+.menu:hover {
+    width: 300px;
+    height: 500px;
+}
+
+.menu--ear {
+    width: 100%;
+    height: 100%;
+
+    /*background: #EE0099;*/
+}    
+.menu--ear:before, .menu--ear:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 200ms;
+}
+
+.menu--ear:before {
+    border-top: 60px solid transparent;
+    border-right: 60px solid #EE0099;
+}
+.menu--ear:after {
+    border-top: 60px solid transparent;
+    border-right: 60px solid rgba(0,0,0,0.3)
+}
+    
+.menu--ear:hover:before {
+    border-top: 500px solid transparent;
+    border-right: 300px solid #EE0099;
+}
+.menu--ear:hover:after {
+    border-top: 500px solid transparent;
+    border-right: 300px solid rgba(0,0,0,0.3)
+}
+
+/******************************************* Social ******************************************/
+/*********************************************************************************************/
+
+.social {
+    width: 60px;
+    height: 60px;
+    background: white;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all 200ms;
+}
+.social:hover {
+    width: 300px;
+    height: 500px;
+}
+
+.social--ear {
+    width: 100%;
+    height: 100%;
+
+    /*background: #EE0099;*/
+}    
+.social--ear:before, .social--ear:after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all 200ms;
+}
+
+.social--ear:before {
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #EE0099;
+}
+.social--ear:after {
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid rgba(0,0,0,0.3)
+}
+    
+.social--ear:hover:before {
+    border-bottom: 500px solid transparent;
+    border-left: 300px solid #EE0099;
+}
+.social--ear:hover:after {
+    border-bottom: 500px solid transparent;
+    border-left: 300px solid rgba(0,0,0,0.3)
+}
+
+
+/****************************************** Hamburger ****************************************/
+/*********************************************************************************************/
+
+#nav-toggle { position: absolute; left: 8px; top: 22px; }
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 2px;
+  height: 5px;
+  width: 35px;
+  background: black;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px; 
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
 }
